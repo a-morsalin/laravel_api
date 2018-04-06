@@ -2,9 +2,12 @@
 
 namespace App\Model;
 
+use App\Model\Product;
 use Illuminate\Database\Eloquent\Model;
 
 class Products extends Model
 {
-    //
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }
